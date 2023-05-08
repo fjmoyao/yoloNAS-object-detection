@@ -1,9 +1,7 @@
 import streamlit as st  
 from detector import * 
 from streamlit import session_state as ss
-import cv2
 import os 
-import sys
 import subprocess
 
 if "process" not in ss:
