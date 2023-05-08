@@ -1,5 +1,5 @@
 opencv_python
-super_gradients==3.0.0
+super_gradients==3.0.5
 torch
 protobuf
 streamlit
