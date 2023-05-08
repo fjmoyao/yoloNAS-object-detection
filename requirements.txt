@@ -1,3 +1,4 @@
-super-gradients==3.1.0
-imutils
-pytube --upgrade
+opencv_python==4.7.0.72
+streamlit==1.22.0
+super_gradients==3.1.0
+torch==1.13.1
