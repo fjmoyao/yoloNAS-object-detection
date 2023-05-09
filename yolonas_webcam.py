@@ -2,11 +2,17 @@ import cv2
 from contextlib import contextmanager
 from super_gradients.training import models
 from super_gradients.common.object_names import Models
+import torch
+
+# Set the device to use GPU if available, otherwise use CPU
+device = 'cuda' if torch.cuda.is_available() else "cpu"
+print(device)
 
 # Define a context manager to get the model object and ensure it is properly cleaned up after use
 @contextmanager
 def get_model():
-    model = models.get("yolo_nas_s", pretrained_weights="coco")
+    model = models.get("yolo_nas_l", pretrained_weights="coco")
+    model = model.to(device)
     yield model
     del model
 
