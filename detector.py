@@ -2,7 +2,7 @@ from super_gradients.training import models
 import torch
 
 # Get the YOLO NAS small model with pretrained weights on COCO dataset
-yolo_nas = models.get("yolo_nas_s", pretrained_weights="coco")
+yolo_nas = models.get("yolo_nas_l", pretrained_weights="coco")
 
 # Set the device to use GPU if available, otherwise use CPU
 device = 'cuda' if torch.cuda.is_available() else "cpu"
@@ -25,7 +25,7 @@ class Detector:
         detections.save(output_file)
         #self.model.to(device).predict(image_path, conf=conf_threshold).save(output_file)
 
-    def on_video(self, video_path: str, output_file: str = "detections.mp4"):
+    def onVideo(self, video_path: str, output_file: str = "detections.mp4"):
         """
         Perform object detection on a video file.
         - video_path: The path to the video file.
