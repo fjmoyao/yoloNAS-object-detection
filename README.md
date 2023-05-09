@@ -1,9 +1,9 @@
 # Object detection with YOLO NAS
 
-This repository contains a script for object detection using the YOLO NAS model with pretrained weights on the COCO dataset. The detector.py script provides functions to detect objects in images and videos, and the yolonas_webcam.py script is for real-time object detection using the webcam. The app.py script provides a Streamlit app for user-friendly detection.
+This repository contains a script for object detection using the YOLO NAS model with pretrained weights on the COCO dataset. The *detector.py* script provides functions to detect objects in images and videos, and the *yolonas_webcam.py* script is for real-time object detection using the webcam. The *app.py* script provides a Streamlit app for user-friendly detection.
 
 ### Requirements
-- Python 3.x
+- Python 3.9
 - PyTorch 1.9 or higher
 - OpenCV 4.5 or higher
 - Streamlit 1.0 or higher
