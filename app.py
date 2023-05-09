@@ -65,8 +65,9 @@ elif file_options =="video":
         vid_btt = st.button("Transformar video", type="primary")
         # If the user clicks the button
         if vid_btt:
-            # Remove any previously processed videos
-            os.remove("detection.mp4")
+            if os.path.exists("detection.mp4"):
+                # Remove any previously processed videos
+                os.remove("detection.mp4")
             # Show a spinner while the video is being processed
             with st.spinner("**Transformando el video...** (Esto puede tomar unos minutos)"):
                 # Call the onVideo method of the Detector object to perform object detection on the video
